@@ -27,7 +27,7 @@ from sklearn import metrics
 from sklearn import tree
 
 def data_load():
-    crops_data = pd.read_csv('static/crops.csv')
+    crops_data = pd.read_csv('static/agriculture_data.csv')
     return crops_data
 
 data = data_load()
@@ -46,7 +46,7 @@ sns.heatmap(data.corr(), annot = True)
 st.pyplot(fig)
 
 # Preprocess the data
-df = pd.read_csv('static/crops.csv')
+df = pd.read_csv('static/agriculture_data.csv')
 df.dropna(subset=['modal_price'], inplace=True)
 
 # Label-encode the "commodity" column
@@ -71,9 +71,3 @@ model.fit(X_train, y_train)
 # Evaluate the model's accuracy on the test data
 accuracy = model.score(X_test, y_test)
 st.write(f"Model accuracy: {accuracy:.3f}")
-
-# Input a district value from the dataset to get the predicted commodity
-test_district = 'Madathukulam' # An example
-district_data = df.loc[df['district'] == test_district]
-commodity = le.inverse_transform(model.predict([district_data]))[0]
-sp.write(f"The predicted commodity for {district} is {commodity}.")
