@@ -30,3 +30,6 @@ data = data_load()
 
 unique_state_rows = data.drop_duplicates(subset=['state'])
 st.write(unique_state_rows)
+
+st.write("stats overview")
+st.write(data.describe())
