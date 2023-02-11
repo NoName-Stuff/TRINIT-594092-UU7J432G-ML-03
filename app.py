@@ -69,7 +69,7 @@ accuracy = model.score(X_test, y_test)
 st.write(f"Model accuracy: {accuracy:.3f}")
 
 # Input a district value from the dataset to get the predicted commodity
-district = 'Madathukulam' # An example
-district_data = X_encoded[X_encoded[f'{district}'] == 1].iloc[0]
+test_district = 'Madathukulam' # An example
+district_data = df.loc[df['district'] == test_district]
 commodity = le.inverse_transform(model.predict([district_data]))[0]
 sp.write(f"The predicted commodity for {district} is {commodity}.")
