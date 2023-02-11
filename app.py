@@ -9,3 +9,9 @@ import seaborn as sns
 from sklearn.metrics import classification_report
 from sklearn import metrics
 from sklearn import tree
+
+def data_load():
+    crops_data = pd.read_csv('static/crops.csv')
+    return crops_data
+
+data = data_load()
