@@ -16,6 +16,5 @@ def data_load():
 
 data = data_load()
 
-unique_states = pd.unique(data['state'])
-unique_state_rows = data[data['state'].isin(unique_states)]
+unique_state_rows = data.drop_duplicates(subset=['state'])
 st.write(unique_state_rows)
