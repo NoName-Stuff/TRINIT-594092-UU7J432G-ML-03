@@ -16,6 +16,6 @@ def data_load():
 
 data = data_load()
 
-unique_states = pd.unique(df['state'])
-unique_state_rows = df[df['state'].isin(unique_states)]
+unique_states = pd.unique(data['state'])
+unique_state_rows = data[data['state'].isin(unique_states)]
 st.write(unique_state_rows)
