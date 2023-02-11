@@ -41,7 +41,9 @@ st.write(data.describe())
 st.write("Crops and State overview")
 st.write(data['state'].value_counts())
 
-sns.heatmap(data.corr(),annot=True)
+fig = plt.figure(figsize=(20,10))
+sns.heatmap(data.corr(), annot = True)
+st.pyplot(fig)
 
 # Preprocess the data
 df = pd.read_csv('static/crops.csv')
