@@ -50,7 +50,7 @@ le = LabelEncoder()
 df['commodity'] = le.fit_transform(df['commodity'])
 
 # Select the relevant columns for modeling
-X = df[['state_name', 'district_name', 'modal_price']]
+X = df[['state', 'district', 'modal_price']]
 y = df['commodity']
 
 # One-hot encode the categorical features
