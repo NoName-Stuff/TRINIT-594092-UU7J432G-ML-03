@@ -41,6 +41,8 @@ st.write(data.describe())
 st.write("Crops and State overview")
 st.write(data['state'].value_counts())
 
+sns.heatmap(data.corr(),annot=True)
+
 # Preprocess the data
 df = pd.read_csv('static/crops.csv')
 df.dropna(subset=['modal_price'], inplace=True)
