@@ -2,6 +2,18 @@ import streamlit as st
 
 st.title("Tri NIT Hackathon")
 
+st.write("Dataset contains the following information")
+st.write("State :-")
+st.write("District :-")
+st.write("Market :-")
+st.write("Commodity :-")
+st.write("Variety :-")
+st.write("arrival_date :-")
+st.write("Minimum Price :-")
+st.write("Maximum Price :-")
+st.write("Modal Price :-")
+
+
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
