@@ -16,4 +16,4 @@ def data_load():
 
 data = data_load()
 
-data.head(5)
+st.write(data.head(5))
