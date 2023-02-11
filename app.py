@@ -33,3 +33,6 @@ st.write(unique_state_rows)
 
 st.write("stats overview")
 st.write(data.describe())
+
+st.write("Crops and State overview")
+st.write(data['state'].value_counts())
