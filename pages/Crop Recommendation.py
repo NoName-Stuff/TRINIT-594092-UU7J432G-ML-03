@@ -13,9 +13,11 @@ from sklearn import tree
 
 df = pd.read_csv('https://raw.githubusercontent.com/NoName-Stuff/trinit-ai/main/static/crop_recommendation.csv')
 
-df['label'].value_counts()
+st.write(df['label'].value_counts())
 
+fig = plt.figure(figsize=(20,10))
 sns.heatmap(df.corr(),annot=True)
+st.pyplot(fig)
 
 features = df[['N', 'P','K','temperature', 'humidity', 'ph', 'rainfall']]
 target = df['label']
