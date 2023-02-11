@@ -15,3 +15,5 @@ def data_load():
     return crops_data
 
 data = data_load()
+
+data.head(5)
