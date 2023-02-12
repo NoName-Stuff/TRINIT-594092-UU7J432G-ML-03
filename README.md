@@ -7,7 +7,7 @@ This is a Machine Learning Centric project. In this project, we have trained dif
 > https://www.kaggle.com/datasets/atharvaingle/crop-recommendation-dataset <br>
 > https://www.kaggle.com/datasets/thammuio/all-agriculture-related-datasets-for-india
 <br>
-Some of the features are described below:
-**Crop Prediction:**<br>
-**Indian Agriculture:**<br>
-**Soil Composition:**<br>
+Some of the features are described below:<br>
+<b>Crop Prediction:</b><br>
+<b>Indian Agriculture:</b><br>
+<b>Soil Composition:</b><br>
