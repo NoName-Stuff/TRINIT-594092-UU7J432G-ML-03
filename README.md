@@ -6,3 +6,8 @@ Checkout our work as a <a href="https://noname-stuff-trinit-594092-uu7j432g-ml-0
 This is a Machine Learning Centric project. In this project, we have trained different ML models on 2 datasets. <br>
 > https://www.kaggle.com/datasets/atharvaingle/crop-recommendation-dataset <br>
 > https://www.kaggle.com/datasets/thammuio/all-agriculture-related-datasets-for-india
+<br>
+Some of the features are described below:
+** Crop Prediction: **
+** Indian Agriculture: **
+** Soil Composition: **
