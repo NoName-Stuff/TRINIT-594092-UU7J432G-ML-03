@@ -1,7 +1,9 @@
+# Import streamlit application
 import streamlit as st
 
 st.title("Tri NIT Hackathon")
 
+# Import required Python Libraries
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
