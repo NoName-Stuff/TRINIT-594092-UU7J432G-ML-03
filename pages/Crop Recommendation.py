@@ -1,7 +1,9 @@
+# Import streamlit Application
 import streamlit as st
 
 st.title("Crop Recommendation")
 
+# Import required python Libraries
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -11,10 +13,12 @@ from sklearn.metrics import classification_report
 from sklearn import metrics
 from sklearn import tree
 
+# Read the dataset
 df = pd.read_csv('https://raw.githubusercontent.com/NoName-Stuff/trinit-ai/main/static/crop_recommendation.csv')
 
 st.write(df['label'].value_counts())
 
+# Plot the heatmap
 fig = plt.figure(figsize=(20,10))
 sns.heatmap(df.corr(),annot=True)
 st.pyplot(fig)
@@ -22,13 +26,14 @@ st.pyplot(fig)
 features = df[['N', 'P','K','temperature', 'humidity', 'ph', 'rainfall']]
 target = df['label']
 labels = df['label']
-
 acc = []
 model = []
 
+# Split the dataset for training and testing
 from sklearn.model_selection import train_test_split
 Xtrain, Xtest, Ytrain, Ytest = train_test_split(features,target,test_size = 0.2,random_state =2)
 
+# Train
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.model_selection import cross_val_score
 
@@ -47,6 +52,7 @@ score = cross_val_score(DecisionTree, features, target,cv=5)
 
 st.write(score)
 
+# Train
 from sklearn.linear_model import LogisticRegression
 
 LogReg = LogisticRegression(random_state=2)
@@ -65,6 +71,7 @@ st.write(classification_report(Ytest,predicted_values))
 score = cross_val_score(LogReg,features,target,cv=5)
 st.write(score)
 
+# Train
 from sklearn.ensemble import RandomForestClassifier
 
 RF = RandomForestClassifier(n_estimators=20, random_state=0)
@@ -79,6 +86,7 @@ st.write("RF's Accuracy is: ", x)
 
 st.write(classification_report(Ytest,predicted_values))
 
+# Plot a bar graph
 plt.figure(figsize=[10,5],dpi = 100)
 plt.title('Accuracy Comparison')
 plt.xlabel('Accuracy')
