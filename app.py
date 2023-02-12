@@ -14,6 +14,7 @@ from sklearn.preprocessing import LabelEncoder
 from sklearn import metrics
 from sklearn import tree
 
+# Load the dataset
 def data_load():
     crops_data = pd.read_csv('static/agriculture_data.csv')
     return crops_data
@@ -30,6 +31,7 @@ st.write(data.describe())
 st.write("Crops and State overview")
 st.write(data['state'].value_counts())
 
+# Plot the heatmap
 fig = plt.figure(figsize=(20,10))
 sns.heatmap(data.corr(), annot = True)
 st.pyplot(fig)
