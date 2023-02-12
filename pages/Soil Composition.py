@@ -13,3 +13,5 @@ st.write("Red soils: These are mainly found in the Deccan plateau and are formed
 st.write("Laterite soils: These are found in the coastal regions of India and are formed by the weathering of rocks in hot and humid conditions. They are rich in iron and aluminum but are deficient in nitrogen, phosphorus, and organic matter.")
 
 st.write("Forest and mountain soils: These are found in the hilly regions of India and are formed by the weathering of rocks. They are rich in organic matter and minerals such as potassium, magnesium, and calcium.")
+
+st.write("The composition of soils in India varies widely, and different soil types have different characteristics that affect crop productivity. Understanding the composition of soils is important for farmers to make informed decisions about soil management practices and crop selection. By leveraging modern technology and science, farmers can optimize their use of these resources and improve crop yields.")
